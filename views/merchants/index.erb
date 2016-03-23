@@ -1,0 +1,31 @@
+<div class="index">
+
+    <h1>Your Merchants</h1>
+
+    <form action="/merchants/new" method="get">
+        <input type="submit" value="ADD NEW">
+    </form>
+
+    <% for transaction in @transactions %>
+        <ul>
+            <li>
+                <br>
+                <br>
+
+                <% for merchant in @merchants %>
+                <% if merchant.id.to_i == transaction.merchant_id %>
+                <%= merchant.name %>
+                <% end %>
+                <% end %> 
+
+                <br>
+                <br>
+
+                <form action="/merchants/<%= merchant.id %>/edit" method="get">
+                    <input type="submit" value="Edit">
+                </form>
+            </li>
+        </ul>
+    <% end %>
+
+</div>

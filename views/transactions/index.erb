@@ -1,0 +1,48 @@
+<div class="index">
+
+    <h1>Your Expenses</h1>
+
+    <form action="/transactions/new" method="get">
+        <input type="submit" value="ADD NEW">
+    </form>
+
+    <% for transaction in @transactions %>
+        <ul>
+            <li>
+                <%= sprintf "%.2f", transaction.amount %>£
+                
+                <br>
+
+                <% for merchant in @merchants %>
+                <% if merchant.id.to_i == transaction.merchant_id %>
+                <%= merchant.name %>
+                <% end %>
+                <% end %> 
+
+                <br>
+
+                <% for category in @categories %>
+                <% if category.id.to_i == transaction.category_id %>
+                <%= category.name %>
+                <% end %>
+                <% end %> 
+
+                <br>
+
+                <%= transaction.transaction_date %>
+
+                <br>
+                <br>
+
+                <form action="/transactions/<%= transaction.id %>/edit" method="get">
+                    <input type="submit" value="Edit">
+                </form>
+
+                <form action="/transactions/<%= transaction.id %>/delete" method="post">
+                    <input type="submit" value="Delete">
+                </form>
+            </li>
+        </ul>
+    <% end %>
+    
+</div>

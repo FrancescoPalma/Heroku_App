@@ -1,0 +1,24 @@
+<div class="index-show">
+
+    <h1>Edit Your Merchant</h1>
+
+        <ul class="break">
+            <li>
+                <form action="/merchants/<%= @merchant.id %>" method="post">
+
+                <br>
+                <br>
+
+                <label></label>
+                <input id="merchantInput" type="text" name="name" placeholder="e.g. Tesco" value="<%= @merchant.name %>">
+
+                <br>
+                <br>
+                
+                <input type="submit" value="Update">
+
+                </form>
+            </li>
+        </ul>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="index">
+
+    <h1>Your Incomes</h1>
+
+    <form action="/income/new" method="get">
+        <input type="submit" value="ADD NEW">
+    </form>
+
+    <% for income in @income %>
+        <ul>
+            <li>
+                <%= sprintf "%.2f", income.amount %>£
+
+                <br>
+
+                <%= income.type %>
+
+                <br>
+
+                <%= income.income_date %>
+                
+                <br>
+                <br>
+
+                <form action="/income/<%= income.id %>/edit" method="get">
+                    <input type="submit" value="Edit">
+                </form>
+
+                <form action="/income/<%= income.id %>/delete" method="post">
+                    <input type="submit" value="Delete">
+                </form>
+            </li>
+        </ul>
+    <% end %>
+    
+</div>

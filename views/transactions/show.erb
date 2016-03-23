@@ -1,0 +1,35 @@
+<div class="index-show">
+
+    <h1>Your Expense</h1>
+
+    <form action="/transactions" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+        <ul>
+            <li>
+                <%= sprintf "%.2f", @transaction.amount %>£
+                
+                <br>
+
+                <% for merchant in @merchants %>
+                <% if merchant.id.to_i == @transaction.merchant_id %>
+                <%= merchant.name %>
+                <% end %>
+                <% end %> 
+
+                <br>
+
+                <% for category in @categories %>
+                <% if category.id.to_i == @transaction.category_id %>
+                <%= category.name %>
+                <% end %>
+                <% end %> 
+
+                <br>
+
+                <%= @transaction.transaction_date %>
+            </li>
+        </ul>
+
+</div>

@@ -1,0 +1,32 @@
+<div class="index-show">
+
+    <h1>Your Current Balance</h1>
+
+    <form action="/" method="get">
+        <input type="submit" value="Back to Home">
+    </form>
+
+        <ul>
+            <li>
+                <br>
+                <br>
+
+
+                Expenses Total: <%= sprintf "%.2f", @account.transactions_total %>£
+
+                <br>
+                <br>
+
+                Incomes Total: <%= sprintf "%.2f", @account.incomes_total %>£
+
+                <br>
+                <br>
+
+                Current Balance: <%= sprintf "%.2f", @account.balance %>£
+
+                <br>
+                <br>
+            </li>
+        </ul>
+
+</div>

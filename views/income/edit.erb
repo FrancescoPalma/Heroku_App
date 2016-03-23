@@ -1,0 +1,33 @@
+<div class="index-show">
+
+    <h1>Edit Your Income</h1>
+
+        <ul class="break">
+            <li>
+                <form action="/income/<%= @income.id %>" method="post">
+
+                <label></label>
+                <input id="amountInput" type="text" name="amount" placeholder="e.g. 100" value="<%= @income.amount %>">
+
+                <br>
+                <br>
+                
+                <label></label>
+                <input id="sourceInput" type="text" name="type" placeholder="e.g. Type of investment" value="<%= @income.type %>">
+
+                <br>
+                <br>
+
+                <label></label>
+                <input id="dateInput" type="date" name="income_date" placeholder="e.g. Date of the income" value="<%= @income.income_date %>">
+
+                <br>
+                <br>
+                
+                <input type="submit" value="Update">
+
+                </form>
+            </li>
+        </ul>
+
+</div>

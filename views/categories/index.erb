@@ -1,0 +1,31 @@
+<div class="index">
+
+    <h1>Your Categories</h1>
+
+    <form action="/categories/new" method="get">
+        <input type="submit" value="ADD NEW">
+    </form>
+
+    <% for transaction in @transactions %>
+        <ul>
+            <li>
+                <br>
+                <br>
+
+                <% for category in @categories  %>
+                <% if category.id.to_i == transaction.category_id  %>
+                <%= category.name %>
+                <% end %>
+                <% end %>
+
+                <br>
+                <br>
+
+                <form action="/categories/<%= category.id %>/edit" method="get">
+                    <input type="submit" value="Edit">
+                </form>
+            </li>
+        </ul>
+    <% end %>
+
+</div>

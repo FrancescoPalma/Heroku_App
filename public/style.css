@@ -1,0 +1,430 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Tablet Landscape*/
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Tabled Portrait*/
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+
+/*Responsive Logo*/
+@media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+
+/*Responsive Logo*/
+@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}
+
+/*Responsive Font Sizes*/
+@media (min-width: 640px) { body {font-size:1rem;} } 
+
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+
+@media (min-width:1100px) { body {font-size:1.5rem;} }
+
+/*Responsive Footer*/
+@media screen and (max-width: 835px)  {
+    footer > p, a {
+        float:none;
+        width:auto;
+        font-size:0.8rem;
+    }
+}
+
+/*Responsive line breaks*/
+@media screen and (max-width: 768px){
+    .break br { display: none; }
+}
+
+/*General Settings and NavBar*/
+header {
+  background: url('./pics/img.jpg');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 
+      0 5px 10px rgba(0,0,0, 0.12),
+      0 5px 10px rgba(0,0,0, 0.24);
+}
+
+img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-wrapper h1 {
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+}
+
+.nav-wrapper h2 {
+  text-align: center;
+  font-family: 'Alex Brush', sans-serif;
+  color: white;
+}
+
+.nav-list {
+  display: block;
+  text-align: center;
+}
+
+.nav-list ul {
+  padding: .2em 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: #036;
+  color: black;
+  width: 100%;
+  font-family:'Roboto', sans-serif;
+  text-align: center;
+}
+
+.nav-list li {
+  display: inline;
+}
+
+.nav-list li a {
+  font-family:'Roboto', sans-serif;
+  font-size: 0.7em;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-list ul li a {
+  padding: .2em 1em;
+  border-right: 1px solid #fff;
+}
+
+#nav-list {
+  display: block;
+  text-align: center;
+}
+
+#nav-list ul {
+  padding: .2em 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: #036;
+  color: black;
+  width: 100%;
+  font: normal 90% arial, helvetica, sans-serif;
+  text-align: center;
+}
+
+#nav-list li {
+  display: inline;
+}
+
+#nav-list li a {
+  font-family:'Roboto', sans-serif;
+  font-size: 0.7em;
+  text-decoration: none;
+  color: white;
+}
+
+#nav-list ul li a {
+  padding: .2em 1em;
+  border-right: 1px solid #fff;
+}
+
+main {
+  background-color: white;
+}
+
+footer {
+  text-align: center;
+  font-size: 15px;
+  line-height: 50px;
+  height: 50px;
+  background-color: black;
+  position: bottom;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: cadetblue;
+}
+
+/*HomePage*/
+.wrapper {
+  max-width: 400px;
+  padding: 1em;
+  display: inline-block;
+  display: table;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.wrapper h1 {
+  color: cadetblue;
+}
+
+.home {
+  background-color: #ebebeb;
+  margin-top: 1.5em;
+  position: relative;
+  box-shadow: 
+      0 5px 10px rgba(0,0,0, 0.12),
+      0 5px 10px rgba(0,0,0, 0.24);
+}
+
+.home h1 {
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.home p {
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+}
+
+/*Turns the uls in index.erb inside views folder in sticky notes*/
+.index {
+  font-family:arial,sans-serif;
+  font-size:80%;
+  margin:1em;
+  background:#ebebeb;
+  color:#fff;
+}
+
+.index h1 {
+  text-align:center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:250%;
+  font-weight:bold;
+  padding-bottom:10px;
+  color:cadetblue;
+}
+
+form {
+  text-align:center;
+  padding-bottom: 15px;
+}
+
+.index ul, li {
+  list-style:none;
+}
+
+.index ul {
+  width: 50%;
+  margin-right: -4px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 55px;
+}
+
+.index ul li {
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:100%;
+  text-decoration:none;
+  text-align:center;
+  color:#000;
+  background:#cfc;
+  height:10em;
+  width:10em;
+  padding:0.5em;
+  margin: 0 auto;
+  /* Firefox*/
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Safari+Chrome*/
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Opera*/
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -webkit-transform:rotate(-4deg);
+  -o-transform:rotate(-4deg);
+  -moz-transform:rotate(-4deg);
+  top:5px;
+  background:#cfc;
+}
+
+.index ul li {
+  font-size:100%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+
+.index ul li:hover, ul li:focus{ 
+    -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    position:relative;
+    z-index:5;
+  }
+
+/*Similar settings but for account/index and the show.erb files*/
+.index-show {
+  font-family:arial,sans-serif;
+  font-size:80%;
+  margin:1em;
+  background:#ebebeb;
+  color:#fff;
+}
+
+.index-show h1 {
+  text-align:center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:180%;
+  font-weight:bold;
+  padding-bottom:10px;
+  color: cadetblue;
+}
+
+.index-show ul {
+  display: block;
+  margin-bottom:125px;
+}
+
+.index-show ul li {
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:100%;
+  text-decoration:none;
+  text-align:center;
+  color:#000;
+  background:#cfc;
+  height:10em;
+  width:10em;
+  padding:0.5em;
+  margin:0 auto;
+  /* Firefox*/
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Safari+Chrome*/
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Opera*/
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -webkit-transform:rotate(-4deg);
+  -o-transform:rotate(-4deg);
+  -moz-transform:rotate(-4deg);
+  top:5px;
+  background:#cfc;
+}
+
+.index-show ul li {
+  font-size:100%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+
+.index-show ul li:hover, ul li:focus{ 
+    -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    position:relative;
+    z-index:5;
+  }
+
+  .index-show input {
+    max-width:100px;
+  }
+
+ /*Buttons*/
+ .home input {
+  background-color: cadetblue;
+  color: white;
+  padding: 0.3em;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+ }
+
+ .index input {
+  background-color: cadetblue;
+  color: white;
+  padding: 0.3em;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+ }
+
+ .index-show input {
+  background-color: cadetblue;
+  color: white;
+  padding: 0.3em;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+ }
+
+/*Dropdowns width*/
+.index-show .own-width {
+  width: 110px;
+}
