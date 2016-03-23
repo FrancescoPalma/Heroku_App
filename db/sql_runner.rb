@@ -6,7 +6,7 @@ class SqlRunner
   def self.run_sql(query)
 
     begin
-      db = PG.connect(ENV["DATABASE_URL"])
+      db = PG.connect( ENV["DATABASE_URL"] )
       result = db.exec(query)
     ensure
       db.close
