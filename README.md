@@ -109,6 +109,7 @@ I can see the value in choosing or even creating an architectural style for my o
 The responsiveness performs quite well and I am proud of the final result, I will certainly take some time to practice and implement it for the next Project. Same goes for the overall content structure and style.  
   
 ## Ready to Launch! :rocket:  
-(In Progress)
+The App is now ready on [Heroku!](https://wealthypockets.herokuapp.com/)  
+Thank you [Scott](https://github.com/scott-ad-riley) for your help on fixing the issue with thee Database connection.
 
 2016 © Francesco Palma - This project is registered under the [MIT License](https://github.com/FrancescoPalma/CodeClan_Assignment_1/blob/master/License)
